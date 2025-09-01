@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Writer Portfolio</title>
+    <!-- Use a professional font and load Tailwind CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .portfolio-card {
+            transition: transform 0.3s ease-in-out;
+        }
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-900 rounded-md p-2">K Manisha</a>
+            <div class="space-x-4 hidden md:block">
+                <a href="#about" class="text-gray-600 hover:text-gray-900 p-2 rounded-md transition-colors duration-200">About</a>
+                <a href="#portfolio" class="text-gray-600 hover:text-gray-900 p-2 rounded-md transition-colors duration-200">Portfolio</a>
+                <a href="#services" class="text-gray-600 hover:text-gray-900 p-2 rounded-md transition-colors duration-200">Services</a>
+                <a href="#contact" class="text-gray-600 hover:text-gray-900 p-2 rounded-md transition-colors duration-200">Contact</a>
+            </div>
+            <!-- Hamburger menu for mobile -->
+            <button id="menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-sm rounded-b-lg">
+            <a href="#about" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded-b-md">About</a>
+            <a href="#portfolio" class="block py-2 px-4 text-gray-600 hover:bg-gray-100">Portfolio</a>
+            <a href="#services" class="block py-2 px-4 text-gray-600 hover:bg-gray-100">Services</a>
+            <a href="#contact" class="block py-2 px-4 text-gray-600 hover:bg-gray-100">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="bg-gray-100 py-20 px-4">
+            <div class="container mx-auto text-center">
+                <div class="flex flex-col items-center">
+                    <img class="w-32 h-32 rounded-full mb-4 object-cover" src="https://placehold.co/128x128/99a3b6/333333?text=Your+Photo+Here" alt="K Manisha Profile Picture">
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2">From Ideas to Impactful Content</h1>
+                    <p class="text-lg md:text-xl text-gray-600 max-w-2xl mb-6">
+                        I specialize in transforming your unique vision into powerful digital stories that resonate with your audience and drive real results. Let's make your brand's message unforgettable.
+                    </p>
+                    <a href="#portfolio" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 transition-colors duration-300 transform hover:scale-105">
+                        View My Work
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 px-4">
+            <div class="container mx-auto">
+                <div class="md:flex md:items-center md:space-x-12">
+                    <div class="md:w-1/2">
+                        <img class="rounded-lg shadow-lg w-full mb-6 md:mb-0" src="https://placehold.co/600x400/94a3b8/e2e8f0?text=About+Me" alt="About Me Image">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">About Me</h2>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Hello! I'm K Manisha, a content writer who believes every blank page is an opportunity to forge a meaningful connection. I'm passionate about transforming complex ideas into clear, compelling narratives that capture attention and inspire action. My journey began with a curiosity for how words can shape perception and drive engagement.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            With a fresh perspective and a strong grasp of digital marketing principles, I specialize in creating content that isn't just read—it's remembered. I'm dedicated to helping brands find their unique voice and tell their story in a way that resonates with their audience and stands out in a crowded digital landscape. Let's create something impactful together.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="bg-gray-100 py-20 px-4">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-12">Recent Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Project 1 -->
+                    <div class="bg-white rounded-lg shadow-md p-6 portfolio-card">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Blog Post: "5 Ways to Improve Your Productivity"</h3>
+                        <p class="text-gray-600 mb-4">
+                            An engaging and informative article for a tech productivity blog, focusing on actionable tips for professionals.
+                        </p>
+                        <a href="blog_post.html" class="inline-block bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 transition-colors duration-200">
+                            Read More
+                        </a>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="bg-white rounded-lg shadow-md p-6 portfolio-card">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Website Copy for a Fitness Brand</h3>
+                        <p class="text-gray-600 mb-4">
+                            Crafted compelling and brand-aligned website content, including homepage, about us, and service pages, for a new fitness startup.
+                        </p>
+                        <a href="fitness_website.html" class="inline-block bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 transition-colors duration-200">
+                            Read More
+                        </a>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="bg-white rounded-lg shadow-md p-6 portfolio-card">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">SEO Content for a Travel Agency</h3>
+                        <p class="text-gray-600 mb-4">
+                            Developed SEO-optimized blog posts and location guides to increase organic traffic and visibility for a travel-focused business.
+                        </p>
+                        <a href="travel_seo.html" class="inline-block bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 transition-colors duration-200">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 px-4">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-12">What I Offer</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Blog Writing</h3>
+                        <p class="text-gray-600">Engaging articles and thought leadership pieces to build your brand authority.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Website Copy</h3>
+                        <p class="text-gray-600">Compelling copy for your homepage, about us, and product pages that drives conversions.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">SEO Content</h3>
+                        <p class="text-gray-600">Keyword-rich content optimized to rank on search engines and attract organic traffic.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Social Media Content</h3>
+                        <p class="text-gray-600">Short, snappy, and creative copy for all your social media platforms.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-gray-100 py-20 px-4">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Let's Connect</h2>
+                <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Ready to elevate your brand's story? Feel free to reach out and let's discuss how my writing can help you achieve your goals.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+                    <!-- Email Link -->
+                    <a href="mailto:kalamatimanisha@gmail.com" class="bg-white text-indigo-600 border border-indigo-600 rounded-full px-6 py-3 font-semibold hover:bg-indigo-600 hover:text-white transition-colors duration-300 transform hover:scale-105">
+                        <span class="inline-block mr-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                        </span>
+                        Email Me
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 K Manisha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu visibility
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('menu-button');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
